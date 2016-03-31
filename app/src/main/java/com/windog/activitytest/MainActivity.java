@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);  //继承于Activity才可以用此句，继承于其他的会出错。
         setContentView(R.layout.first_layout);
 
         //找到button1,触发一个toast
@@ -89,6 +91,15 @@ public class MainActivity extends BaseActivity {
                 startActivityForResult(intent, 1);
             }
         });
+
+        Button btn2list = (Button) findViewById(R.id.to_listviewActivity);
+        btn2list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,FourthActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     /*接收Activity2返回的data，需通过此方法
@@ -105,6 +116,7 @@ public class MainActivity extends BaseActivity {
             default:
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

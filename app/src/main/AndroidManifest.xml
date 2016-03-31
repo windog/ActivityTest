@@ -29,6 +29,7 @@
                 <data android:scheme="http"></data>
             </intent-filter>
         </activity>
+        <activity android:name=".FourthActivity"></activity>
     </application>
 
 </manifest>

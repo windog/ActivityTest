@@ -3,6 +3,8 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
     <Button
         android:id="@+id/button_1"
         android:layout_width="match_parent"
@@ -44,4 +46,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="启动activity2并期待返回值"/>
+    
+    <Button
+        android:id="@+id/to_listviewActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="to listview"/>
 </LinearLayout>
