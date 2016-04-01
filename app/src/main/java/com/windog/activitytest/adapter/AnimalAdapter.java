@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * Created by windog on 2016/3/31.
- *
+ * <p/>
  * Listview与Adapter的使用，主要代码都在Adapter中
  * 最常用，也最方便的 adapter就是 ArrayAdapter
  */
@@ -34,17 +34,38 @@ public class AnimalAdapter extends ArrayAdapter<Animal> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Animal animal = getItem(position);     //getItem可以得到当前子项的animal实例
-        View view = LayoutInflater.from(getContext()).inflate(resourceId, null);    //用layoutflater给当前子项添加布局
+
+        View view = null;
+        ViewHolder viewHolder;   //自定义内部类
+
+        if (convertView == null) {    //判断convertview是否为空，避免重复加载布局，提高性能
+            LayoutInflater.from(getContext()).inflate(resourceId, null);    //用layoutflater给当前子项添加布局
+            viewHolder = new ViewHolder();
+
+            viewHolder.image = (ImageView) view.findViewById(R.id.item_image);
+            viewHolder.name = (TextView) view.findViewById(R.id.item_name);
+            viewHolder.speak = (TextView) view.findViewById(R.id.item_speak);
+
+            view.setTag(viewHolder);  //viewholder存储在view中
+        } else {
+            view = convertView;
+            viewHolder = (ViewHolder) view.getTag(); //获取出来
+        }
 
         //给子项中的每一个控件设置，分别去model中去找数据，最后再返回此子项的view
-        ImageView image = (ImageView) view.findViewById(R.id.item_image);
-        TextView name = (TextView) view.findViewById(R.id.item_name);
-        TextView speak = (TextView) view.findViewById(R.id.item_speak);
-
-        image.setImageResource(animal.getImageId());
-        name.setText(animal.getName());
-        speak.setText(animal.getSpeak());
+        //当控件都存储在viewholder中，就用viewholder来设置即可
+        viewHolder.image.setImageResource(animal.getImageId());
+        viewHolder.name.setText(animal.getName());
+        viewHolder.speak.setText(animal.getSpeak());
 
         return view;
+    }
+
+    //自定义内部类！！！viewHolder
+    //加静态是为了在多个地方使用这个 Holder的时候，类只需加载一次，如果只是使用了一次，加不加也没所谓！
+    static class ViewHolder {
+        ImageView image;
+        TextView name;
+        TextView speak;
     }
 }

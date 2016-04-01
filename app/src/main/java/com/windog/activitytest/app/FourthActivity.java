@@ -1,9 +1,10 @@
-package com.windog.activitytest;
+package com.windog.activitytest.app;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.windog.activitytest.R;
 import com.windog.activitytest.adapter.AnimalAdapter;
 import com.windog.activitytest.bean.Animal;
 

@@ -1,4 +1,4 @@
-package com.windog.activitytest;
+package com.windog.activitytest.app;
 
 import android.app.Activity;
 import android.os.Bundle;

@@ -1,7 +1,9 @@
-package com.windog.activitytest;
+package com.windog.activitytest.app;
 
 import android.os.Bundle;
 import android.view.View;
+
+import com.windog.activitytest.R;
 
 /**
  * Created by windog on 2016/3/29.

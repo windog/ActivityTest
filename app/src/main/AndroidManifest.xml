@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".app.MainActivity"
             android:launchMode="singleTask"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
@@ -19,8 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"></activity>
-        <activity android:name=".ThirdActivity">
+        <activity android:name=".app.SecondActivity"></activity>
+        <activity android:name=".app.ThirdActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"></action>
                 <action android:name="com.windog.activitytest.ACTION_START"></action>
@@ -29,7 +29,7 @@
                 <data android:scheme="http"></data>
             </intent-filter>
         </activity>
-        <activity android:name=".FourthActivity"></activity>
+        <activity android:name=".app.FourthActivity"></activity>
     </application>
 
 </manifest>

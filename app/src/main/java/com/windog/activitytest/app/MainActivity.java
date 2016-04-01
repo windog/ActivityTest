@@ -1,4 +1,4 @@
-package com.windog.activitytest;
+package com.windog.activitytest.app;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.windog.activitytest.R;
 
 public class MainActivity extends BaseActivity {
 
@@ -100,6 +102,8 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 
     /*接收Activity2返回的data，需通过此方法
