@@ -35,11 +35,11 @@ public class AnimalAdapter extends ArrayAdapter<Animal> {
     public View getView(int position, View convertView, ViewGroup parent) {
         Animal animal = getItem(position);     //getItem可以得到当前子项的animal实例
 
-        View view = null;
+        View view ;
         ViewHolder viewHolder;   //自定义内部类
 
         if (convertView == null) {    //判断convertview是否为空，避免重复加载布局，提高性能
-            LayoutInflater.from(getContext()).inflate(resourceId, null);    //用layoutflater给当前子项添加布局
+            view = LayoutInflater.from(getContext()).inflate(resourceId, null);    //用layoutflater给当前子项添加布局
             viewHolder = new ViewHolder();
 
             viewHolder.image = (ImageView) view.findViewById(R.id.item_image);

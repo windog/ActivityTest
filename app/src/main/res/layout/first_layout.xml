@@ -52,4 +52,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="to listview"/>
+
+    <Button
+        android:id="@+id/to_activity5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Msg界面"/>
+
 </LinearLayout>

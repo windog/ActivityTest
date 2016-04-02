@@ -10,8 +10,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".app.MainActivity"
-            android:launchMode="singleTask"
             android:label="@string/app_name"
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,17 +19,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.SecondActivity"></activity>
+        <activity android:name=".app.SecondActivity" />
         <activity android:name=".app.ThirdActivity">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"></action>
-                <action android:name="com.windog.activitytest.ACTION_START"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
-                <category android:name="com.windog.activitytest.MY_CATEGORY"></category>
-                <data android:scheme="http"></data>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="com.windog.activitytest.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.windog.activitytest.MY_CATEGORY" />
+
+                <data android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.FourthActivity"></activity>
+        <activity android:name=".app.FourthActivity" />
+        <activity android:name=".app.FifthActivity"></activity>
     </application>
 
 </manifest>

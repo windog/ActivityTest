@@ -2,7 +2,10 @@ package com.windog.activitytest.app;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.windog.activitytest.R;
 import com.windog.activitytest.adapter.AnimalAdapter;
@@ -31,6 +34,15 @@ public class FourthActivity extends Activity {
         //然后listview，set之前new好的adapter
         ListView listView = (ListView) findViewById(R.id.animal_listview);
         listView.setAdapter(animalAdapter);
+
+        //listview的点击事件
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Animal animal = animalList.get(position);
+                Toast.makeText(FourthActivity.this,animal.getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     //提供数据的方法，如果以后从网络取数据，也注意要另起一个方法，代码会更明了。

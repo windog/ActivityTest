@@ -94,6 +94,7 @@ public class MainActivity extends BaseActivity {
             }
         });
 
+
         Button btn2list = (Button) findViewById(R.id.to_listviewActivity);
         btn2list.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,7 +104,15 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-
+        //跳转到msg界面
+        Button btn2msg = (Button) findViewById(R.id.to_activity5);
+        btn2msg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent(MainActivity.this,FifthActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     /*接收Activity2返回的data，需通过此方法
