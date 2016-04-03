@@ -7,4 +7,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button 2"/>
+
+    <Button
+        android:id="@+id/send_myBroadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送自定义标准广播，action:windiscall "/>
+
+    <Button
+        android:id="@+id/send_localBroadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送自定义localBroadcast，action:windy"/>
 </LinearLayout>

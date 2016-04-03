@@ -2,12 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.windog.activitytest">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--Activities-->
         <activity
             android:name=".app.MainActivity"
             android:label="@string/app_name"
@@ -33,7 +38,21 @@
         </activity>
         <activity android:name=".app.FourthActivity" />
         <activity android:name=".app.FifthActivity"></activity>
+
+        <!--Receivers-->
+        <!--receiver中添加filter，filter中添加action-->
+        <receiver android:name=".BroadcastReceiver.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
+                <!--对于有序广播，可以设置接收器的优先级，优先级高的话，还可以截断广播-->
+        <receiver android:name=".BroadcastReceiver.MyBroadcastReceiver">
+            <intent-filter android:priority="100">
+                <action android:name="windiscall"></action>
+            </intent-filter>
+        </receiver>
     </application>
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+
 </manifest>
