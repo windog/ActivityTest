@@ -71,7 +71,21 @@ public class SecondActivity extends BaseActivity {
         IntentFilter intentFilter1 = new IntentFilter();
         intentFilter1.addAction("windy");
         myLocalBroadcastReceiver = new MyLocalBroadcastReceiver();
-        localBroadcastManager.registerReceiver(myLocalBroadcastReceiver,intentFilter1);
+        localBroadcastManager.registerReceiver(myLocalBroadcastReceiver, intentFilter1);
+
+        //发送广播，强制下线，并返回首页
+        Button btnoffline = (Button) findViewById(R.id.force_offline);
+        btnoffline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(SecondActivity.this,"LLLLL",Toast.LENGTH_LONG).show();
+                Intent intentoff = new Intent("WINDY.FORCE_OFFLINE");
+                sendBroadcast(intentoff);
+            }
+        });
+
+
+
     }
 
     //当用户不是按button返回，而是按back键返回时，会调用此方法
@@ -111,5 +125,7 @@ public class SecondActivity extends BaseActivity {
             Toast.makeText(SecondActivity.this,"接收到localBroadcast",Toast.LENGTH_SHORT).show();
         }
     }
+
+
 
 }
