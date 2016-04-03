@@ -1,9 +1,15 @@
 package com.windog.activitytest.app;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.windog.activitytest.R;
 
@@ -11,6 +17,9 @@ import com.windog.activitytest.R;
  * Created by windog on 2016/3/29.
  */
 public class SecondActivity extends BaseActivity {
+
+    NetStateReceiver netStateReceiver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +36,12 @@ public class SecondActivity extends BaseActivity {
                 finish();
             }
         });
+
+        //接受系统发出的网络变化的广播
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
+        netStateReceiver = new NetStateReceiver();
+        registerReceiver(netStateReceiver,intentFilter);
     }
 
     //当用户不是按button返回，而是按back键返回时，会调用此方法
@@ -36,6 +51,26 @@ public class SecondActivity extends BaseActivity {
         intent.putExtra("data_return","Hello MainActivity");
         setResult(RESULT_OK, intent);
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(netStateReceiver);
+    }
+
+    class NetStateReceiver extends BroadcastReceiver{
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(context.CONNECTIVITY_SERVICE);
+
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            if(networkInfo != null && networkInfo.isAvailable() ){
+                Toast.makeText(SecondActivity.this,"network is available",Toast.LENGTH_LONG).show();
+            }else {
+                Toast.makeText(SecondActivity.this,"network is unavailable",Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
 }

@@ -37,10 +37,11 @@ public class FifthActivity extends BaseActivity {
 
         msgListview.setAdapter(msgAdapter);
 
+        //代码走到这里，界面已经显示出来了。下面就是按下button的逻辑
         btnSendMsg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(FifthActivity.this,"hh",Toast.LENGTH_SHORT);
+                //Toast.makeText(FifthActivity.this,"hh",Toast.LENGTH_SHORT).show();
 
                 String content = editText.getText().toString();
                 if (!"".equals(content)) {
@@ -62,7 +63,5 @@ public class FifthActivity extends BaseActivity {
         msgList.add(new Msg("Nice to see you!!", Msg.TYPE_SEND));
         msgList.add(new Msg("Don't be sad to me because I roam , it keeps me alive!!", Msg.TYPE_RECEIVED));
         msgList.add(new Msg("Gorgeous!!", Msg.TYPE_SEND));
-
-
     }
 }
