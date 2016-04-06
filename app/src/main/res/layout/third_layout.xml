@@ -23,7 +23,7 @@
         android:background="#ff5722"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="退出程序"/>
+        android:text="完全退出程序"/>
 
 
 </LinearLayout>
