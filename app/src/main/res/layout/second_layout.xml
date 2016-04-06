@@ -3,24 +3,28 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Button
+        android:background="#8bc34a"
         android:id="@+id/button_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button 2"/>
 
     <Button
+        android:background="#ffeb3b"
         android:id="@+id/send_myBroadcast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="发送自定义标准广播，action:windiscall "/>
 
     <Button
+        android:background="#9e9e9e"
         android:id="@+id/send_localBroadcast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="发送自定义localBroadcast，action:windy"/>
 
     <Button
+        android:background="#e51c23"
         android:id="@+id/force_offline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

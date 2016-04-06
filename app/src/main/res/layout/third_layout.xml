@@ -3,17 +3,27 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
+    <!--textAppearance就这样用-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/google"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="this third activity"
         android:gravity="center"
-        android:textSize="20dp"/>
+        android:background="#259b24"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"/>
     <Button
         android:id="@+id/finish_all"
+        android:background="#ff5722"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="退出程序"/>
+
+
 </LinearLayout>
