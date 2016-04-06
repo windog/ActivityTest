@@ -113,6 +113,16 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+        //跳转到Activity6，IO
+        Button btn2io = (Button) findViewById(R.id.toActivity6);
+        btn2io.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,SixthActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     /*接收Activity2返回的data，需通过此方法
