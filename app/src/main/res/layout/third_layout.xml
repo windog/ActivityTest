@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <!--textAppearance就这样用-->
+    <!--scaleType="centerCrop" 设置大图片居中剪裁，沉浸式体验-->
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +24,7 @@
         android:background="#ff5722"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Touch To Exit"/>
+        android:text="Exit App"/>
 
 
 </LinearLayout>
