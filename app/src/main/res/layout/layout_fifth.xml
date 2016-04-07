@@ -17,11 +17,9 @@
 
         <EditText
             android:id="@+id/msg_content"
-
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-
             android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:hint="Type Here"
             android:maxLines="2" />
 
