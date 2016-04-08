@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="10dp">
+    <TextView
+        android:background="#4CAF50"
+        android:id="@+id/Ben"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Ben"
+        android:textAppearance="?android:textAppearanceLarge"/>
+
+    <TextView
+        android:id="@+id/Lyla"
+        android:textSize="25sp"
+        android:layout_alignParentBottom ="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Lyla"/>
+
+    <TextView
+        android:id="@+id/Jennie"
+        android:textSize="25sp"
+        android:layout_alignParentBottom ="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jennie"/>
+
+    <TextView
+        android:id="@+id/Kunal"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/Ben"
+        android:text="Kunal"/>
+
+    <TextView
+        android:id="@+id/Omoju"
+        android:textSize="25sp"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/Jennie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Omoju"/>
+
+    <TextView
+        android:id="@+id/Kunalagure"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kunalagure"
+        android:layout_toRightOf="@id/Ben"/>
+    
+    <TextView
+        android:id="@+id/Amy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Amy"
+        android:layout_above="@id/Omoju"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/Me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Me"
+        android:layout_below="@id/Ben"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/Duck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Duck"
+        android:layout_above="@id/Lyla"/>
+
+    <TextView
+        android:id="@+id/Windy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Windy"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/Amy"/>
+
+</RelativeLayout>
