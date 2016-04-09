@@ -8,7 +8,7 @@
         android:padding="20dp"
         android:layout_margin="20dp"
         android:id="@+id/tv"
-        android:text="Hello"
+        android:text="Windy"
         android:textAppearance="?android:textAppearanceLarge"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
