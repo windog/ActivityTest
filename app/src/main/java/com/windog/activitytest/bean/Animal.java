@@ -5,6 +5,7 @@ package com.windog.activitytest.bean;
  */
 public class Animal {
 
+    //包含一个图片ID,名字,说的话,共成员三个变量
     private int imageId;
     private String name;
     private String speak;
