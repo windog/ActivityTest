@@ -31,6 +31,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="com.windog.activitytest.ACTION_START" />
 
+                <!--  以下两行是定义启动Activity的，也就是会在手机桌面放一个图标。可以设置多个，并不唯一  -->
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="com.windog.activitytest.MY_CATEGORY" />
 
