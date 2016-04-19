@@ -125,7 +125,7 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    /*接收Activity2返回的data，需通过此方法
+    /*接收Activity2返回的data，需通过此方法.
     * 可能用startActivityForResult()启动了很多个Activity，接收返回数据，都在这个方法里*/
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
