@@ -130,7 +130,8 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
-            case 1:     //先判断请求码，确定是从Activity 2回来的，再判断返回状态
+            //先判断请求码，确定是从Activity 2回来的，再判断返回状态
+            case 1:
                 if (resultCode == RESULT_OK) {
                     String returnedData = data.getStringExtra("data_return");
                     Log.d("MainActivity", returnedData);

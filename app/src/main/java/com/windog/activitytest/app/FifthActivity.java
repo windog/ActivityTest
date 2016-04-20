@@ -46,7 +46,8 @@ public class FifthActivity extends BaseActivity {
                 String content = editText.getText().toString();
                 if (!"".equals(content)) {
                     msgList.add(new Msg(content, Msg.TYPE_SEND));
-                    msgAdapter.notifyDataSetChanged();  //数据发生变化时，自动刷新数据集（adapter）
+                    //数据发生变化时，自动刷新数据集（adapter）
+                    msgAdapter.notifyDataSetChanged();
 
                     //sets the currently selected item (listview定位到最后一行，消息发出，界面自动上移)，不写这句，稍微有点影响体验
                     msgListview.setSelection(msgList.size());
