@@ -15,7 +15,7 @@
 
         <!--Activities-->
         <activity
-            android:name=".app.MainActivity"
+            android:name=".ui.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar">
@@ -25,8 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.SecondActivity" />
-        <activity android:name=".app.ThirdActivity">
+        <activity android:name=".ui.SecondActivity" />
+        <activity android:name=".ui.ThirdActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="com.windog.activitytest.ACTION_START" />
@@ -38,8 +38,8 @@
                 <data android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.FourthActivity" />
-        <activity android:name=".app.FifthActivity"></activity>
+        <activity android:name=".ui.FourthActivity" />
+        <activity android:name=".ui.FifthActivity"></activity>
 
         <!--Receivers-->
         <!--receiver中添加filter，filter中添加action-->

@@ -1,4 +1,4 @@
-package com.windog.activitytest.app;
+package com.windog.activitytest.ui;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -88,7 +88,7 @@ public class SecondActivity extends BaseActivity {
 
     }
 
-    //当用户不是按button返回，而是按back键返回时，会调用此方法
+    /*当用户不是按button返回，而是按back键返回时，会调用此方法*/
     @Override
     public void onBackPressed() {
         Intent intent = new Intent();

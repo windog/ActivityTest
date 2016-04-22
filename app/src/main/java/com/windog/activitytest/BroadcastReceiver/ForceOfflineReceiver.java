@@ -7,8 +7,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.WindowManager;
 
-import com.windog.activitytest.app.ActivityCollector;
-import com.windog.activitytest.app.MainActivity;
+import com.windog.activitytest.ui.ActivityCollector;
+import com.windog.activitytest.ui.MainActivity;
 
 /**
  * Created by windog on 2016/4/3.

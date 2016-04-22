@@ -1,4 +1,4 @@
-package com.windog.activitytest.app;
+package com.windog.activitytest.ui;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.windog.activitytest.R;
@@ -121,6 +122,14 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,SixthActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        TextView clickTv = (TextView) findViewById(R.id.clickTv);
+        clickTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"hah",Toast.LENGTH_SHORT).show();
             }
         });
     }
